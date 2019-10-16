@@ -1,0 +1,853 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9106C455234B148600362F7C /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9106C454234B148600362F7C /* Recipe.swift */; };
+		9106C458234B155A00362F7C /* RecipeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9106C457234B155A00362F7C /* RecipeService.swift */; };
+		9106C45A234B166F00362F7C /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9106C459234B166F00362F7C /* LoginService.swift */; };
+		9106C460234B1C6600362F7C /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 9106C45F234B1C6600362F7C /* RxCocoa */; };
+		9106C464234B1C6600362F7C /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9106C463234B1C6600362F7C /* RxSwift */; };
+		9106C468234C442F00362F7C /* ControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9106C467234C442F00362F7C /* ControllerType.swift */; };
+		9106C46B234C446D00362F7C /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9106C46A234C446D00362F7C /* ViewModelProtocol.swift */; };
+		9106C46E234C451A00362F7C /* LoginControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9106C46D234C451A00362F7C /* LoginControllerViewModel.swift */; };
+		9106C470234C45C000362F7C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9106C46F234C45C000362F7C /* User.swift */; };
+		9106C472234C45E800362F7C /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9106C471234C45E800362F7C /* Credentials.swift */; };
+		919003532343257F00EC35EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919003522343257F00EC35EE /* AppDelegate.swift */; };
+		919003552343257F00EC35EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919003542343257F00EC35EE /* SceneDelegate.swift */; };
+		919003572343257F00EC35EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919003562343257F00EC35EE /* ViewController.swift */; };
+		9190035A2343257F00EC35EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 919003582343257F00EC35EE /* Main.storyboard */; };
+		9190035D2343257F00EC35EE /* HelloFreshv3.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9190035B2343257F00EC35EE /* HelloFreshv3.xcdatamodeld */; };
+		9190035F2343258100EC35EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9190035E2343258100EC35EE /* Assets.xcassets */; };
+		919003622343258100EC35EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 919003602343258100EC35EE /* LaunchScreen.storyboard */; };
+		9190036D2343258100EC35EE /* HelloFreshv3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190036C2343258100EC35EE /* HelloFreshv3Tests.swift */; };
+		919003782343258100EC35EE /* HelloFreshv3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919003772343258100EC35EE /* HelloFreshv3UITests.swift */; };
+		9190038A2343260D00EC35EE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919003892343260D00EC35EE /* AppCoordinator.swift */; };
+		9190038C2343264D00EC35EE /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190038B2343264D00EC35EE /* Coordinator.swift */; };
+		9190038E2343277400EC35EE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190038D2343277400EC35EE /* LoginViewController.swift */; };
+		919003902343279700EC35EE /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190038F2343279700EC35EE /* Storyboards.swift */; };
+		91900393234328FA00EC35EE /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91900392234328FA00EC35EE /* Login.storyboard */; };
+		919C3D69234DB2CC00E0A0D4 /* Recipe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 919C3D68234DB2CC00E0A0D4 /* Recipe.storyboard */; };
+		919C3D6B234DB2D900E0A0D4 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919C3D6A234DB2D900E0A0D4 /* RecipeViewController.swift */; };
+		919C3D6D234DB30E00E0A0D4 /* RecipeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919C3D6C234DB30E00E0A0D4 /* RecipeCoordinator.swift */; };
+		919C3D6F235050FE00E0A0D4 /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919C3D6E235050FE00E0A0D4 /* RecipeViewModel.swift */; };
+		919C3D71235074B900E0A0D4 /* recipes.json in Resources */ = {isa = PBXBuildFile; fileRef = 919C3D70235074B900E0A0D4 /* recipes.json */; };
+		919C3D732351D8EF00E0A0D4 /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919C3D722351D8EF00E0A0D4 /* RecipeTableViewCell.swift */; };
+		919C3D752351D91900E0A0D4 /* RecipeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 919C3D742351D91900E0A0D4 /* RecipeTableViewCell.xib */; };
+		919C3D77235211D300E0A0D4 /* RecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919C3D76235211D300E0A0D4 /* RecipeDetailViewController.swift */; };
+		919C3D7A2352128700E0A0D4 /* StarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919C3D792352128700E0A0D4 /* StarsView.swift */; };
+		919C3D7C2352145F00E0A0D4 /* HelloFreshServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919C3D7B2352145F00E0A0D4 /* HelloFreshServices.swift */; };
+		919C3D7E235214AB00E0A0D4 /* StarsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 919C3D7D235214AB00E0A0D4 /* StarsView.xib */; };
+		919C3D892356D20600E0A0D4 /* ImageLoaderURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919C3D882356D20600E0A0D4 /* ImageLoaderURL.swift */; };
+		919C3D8B2356D22B00E0A0D4 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919C3D8A2356D22B00E0A0D4 /* UIViewControllerExtensions.swift */; };
+		919C3D8D2356D25200E0A0D4 /* Observable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919C3D8C2356D25200E0A0D4 /* Observable+Extensions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		919003692343258100EC35EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 919003472343257F00EC35EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9190034E2343257F00EC35EE;
+			remoteInfo = HelloFreshv3;
+		};
+		919003742343258100EC35EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 919003472343257F00EC35EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9190034E2343257F00EC35EE;
+			remoteInfo = HelloFreshv3;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9106C454234B148600362F7C /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		9106C457234B155A00362F7C /* RecipeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeService.swift; sourceTree = "<group>"; };
+		9106C459234B166F00362F7C /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		9106C467234C442F00362F7C /* ControllerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerType.swift; sourceTree = "<group>"; };
+		9106C46A234C446D00362F7C /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
+		9106C46D234C451A00362F7C /* LoginControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginControllerViewModel.swift; sourceTree = "<group>"; };
+		9106C46F234C45C000362F7C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9106C471234C45E800362F7C /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		9190034F2343257F00EC35EE /* HelloFreshv3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloFreshv3.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		919003522343257F00EC35EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		919003542343257F00EC35EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		919003562343257F00EC35EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		919003592343257F00EC35EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9190035C2343257F00EC35EE /* HelloFreshv3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HelloFreshv3.xcdatamodel; sourceTree = "<group>"; };
+		9190035E2343258100EC35EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		919003612343258100EC35EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		919003632343258100EC35EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		919003682343258100EC35EE /* HelloFreshv3Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloFreshv3Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9190036C2343258100EC35EE /* HelloFreshv3Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloFreshv3Tests.swift; sourceTree = "<group>"; };
+		9190036E2343258100EC35EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		919003732343258100EC35EE /* HelloFreshv3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloFreshv3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		919003772343258100EC35EE /* HelloFreshv3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloFreshv3UITests.swift; sourceTree = "<group>"; };
+		919003792343258100EC35EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		919003892343260D00EC35EE /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		9190038B2343264D00EC35EE /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		9190038D2343277400EC35EE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9190038F2343279700EC35EE /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
+		91900392234328FA00EC35EE /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		919C3D5B234C5C2900E0A0D4 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		919C3D68234DB2CC00E0A0D4 /* Recipe.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Recipe.storyboard; sourceTree = "<group>"; };
+		919C3D6A234DB2D900E0A0D4 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
+		919C3D6C234DB30E00E0A0D4 /* RecipeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCoordinator.swift; sourceTree = "<group>"; };
+		919C3D6E235050FE00E0A0D4 /* RecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
+		919C3D70235074B900E0A0D4 /* recipes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = recipes.json; path = "../../../../Desktop/HelloFreshTest copy/HelloFreshTest/Json/recipes.json"; sourceTree = "<group>"; };
+		919C3D722351D8EF00E0A0D4 /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
+		919C3D742351D91900E0A0D4 /* RecipeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeTableViewCell.xib; sourceTree = "<group>"; };
+		919C3D76235211D300E0A0D4 /* RecipeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewController.swift; sourceTree = "<group>"; };
+		919C3D792352128700E0A0D4 /* StarsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsView.swift; sourceTree = "<group>"; };
+		919C3D7B2352145F00E0A0D4 /* HelloFreshServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloFreshServices.swift; sourceTree = "<group>"; };
+		919C3D7D235214AB00E0A0D4 /* StarsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StarsView.xib; sourceTree = "<group>"; };
+		919C3D882356D20600E0A0D4 /* ImageLoaderURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoaderURL.swift; sourceTree = "<group>"; };
+		919C3D8A2356D22B00E0A0D4 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		919C3D8C2356D25200E0A0D4 /* Observable+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Extensions.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9190034C2343257F00EC35EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9106C460234B1C6600362F7C /* RxCocoa in Frameworks */,
+				9106C464234B1C6600362F7C /* RxSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		919003652343258100EC35EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		919003702343258100EC35EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9106C453234B147600362F7C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9106C454234B148600362F7C /* Recipe.swift */,
+				9106C46F234C45C000362F7C /* User.swift */,
+				9106C471234C45E800362F7C /* Credentials.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9106C456234B14E700362F7C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9106C457234B155A00362F7C /* RecipeService.swift */,
+				9106C459234B166F00362F7C /* LoginService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9106C45C234B1C6600362F7C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				919C3D5B234C5C2900E0A0D4 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9106C469234C444400362F7C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9106C467234C442F00362F7C /* ControllerType.swift */,
+				9106C46A234C446D00362F7C /* ViewModelProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		9106C46C234C451100362F7C /* View-Models */ = {
+			isa = PBXGroup;
+			children = (
+				9106C46D234C451A00362F7C /* LoginControllerViewModel.swift */,
+				919C3D6E235050FE00E0A0D4 /* RecipeViewModel.swift */,
+			);
+			path = "View-Models";
+			sourceTree = "<group>";
+		};
+		919003462343257F00EC35EE = {
+			isa = PBXGroup;
+			children = (
+				919003512343257F00EC35EE /* HelloFreshv3 */,
+				9190036B2343258100EC35EE /* HelloFreshv3Tests */,
+				919003762343258100EC35EE /* HelloFreshv3UITests */,
+				919003502343257F00EC35EE /* Products */,
+				9106C45C234B1C6600362F7C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		919003502343257F00EC35EE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9190034F2343257F00EC35EE /* HelloFreshv3.app */,
+				919003682343258100EC35EE /* HelloFreshv3Tests.xctest */,
+				919003732343258100EC35EE /* HelloFreshv3UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		919003512343257F00EC35EE /* HelloFreshv3 */ = {
+			isa = PBXGroup;
+			children = (
+				919C3D782352127400E0A0D4 /* Views */,
+				919C3D70235074B900E0A0D4 /* recipes.json */,
+				9106C46C234C451100362F7C /* View-Models */,
+				9106C469234C444400362F7C /* Protocols */,
+				9106C456234B14E700362F7C /* Services */,
+				9106C453234B147600362F7C /* Models */,
+				91900388234325F400EC35EE /* App delegate */,
+				91900387234325C700EC35EE /* Extensions */,
+				91900386234325BC00EC35EE /* Base */,
+				91900385234325B500EC35EE /* Scenes */,
+				919003562343257F00EC35EE /* ViewController.swift */,
+				919003582343257F00EC35EE /* Main.storyboard */,
+				9190035E2343258100EC35EE /* Assets.xcassets */,
+				919003602343258100EC35EE /* LaunchScreen.storyboard */,
+				919003632343258100EC35EE /* Info.plist */,
+				9190035B2343257F00EC35EE /* HelloFreshv3.xcdatamodeld */,
+			);
+			path = HelloFreshv3;
+			sourceTree = "<group>";
+		};
+		9190036B2343258100EC35EE /* HelloFreshv3Tests */ = {
+			isa = PBXGroup;
+			children = (
+				9190036C2343258100EC35EE /* HelloFreshv3Tests.swift */,
+				9190036E2343258100EC35EE /* Info.plist */,
+				919C3D7B2352145F00E0A0D4 /* HelloFreshServices.swift */,
+			);
+			path = HelloFreshv3Tests;
+			sourceTree = "<group>";
+		};
+		919003762343258100EC35EE /* HelloFreshv3UITests */ = {
+			isa = PBXGroup;
+			children = (
+				919003772343258100EC35EE /* HelloFreshv3UITests.swift */,
+				919003792343258100EC35EE /* Info.plist */,
+			);
+			path = HelloFreshv3UITests;
+			sourceTree = "<group>";
+		};
+		91900385234325B500EC35EE /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				919C3D67234DB2BA00E0A0D4 /* Recipes Scene */,
+				91900391234328EA00EC35EE /* Login Scene */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		91900386234325BC00EC35EE /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				9190038F2343279700EC35EE /* Storyboards.swift */,
+				9190038B2343264D00EC35EE /* Coordinator.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		91900387234325C700EC35EE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				919C3D8A2356D22B00E0A0D4 /* UIViewControllerExtensions.swift */,
+				919C3D8C2356D25200E0A0D4 /* Observable+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		91900388234325F400EC35EE /* App delegate */ = {
+			isa = PBXGroup;
+			children = (
+				919003522343257F00EC35EE /* AppDelegate.swift */,
+				919003542343257F00EC35EE /* SceneDelegate.swift */,
+				919003892343260D00EC35EE /* AppCoordinator.swift */,
+			);
+			path = "App delegate";
+			sourceTree = "<group>";
+		};
+		91900391234328EA00EC35EE /* Login Scene */ = {
+			isa = PBXGroup;
+			children = (
+				9190038D2343277400EC35EE /* LoginViewController.swift */,
+				91900392234328FA00EC35EE /* Login.storyboard */,
+			);
+			path = "Login Scene";
+			sourceTree = "<group>";
+		};
+		919C3D67234DB2BA00E0A0D4 /* Recipes Scene */ = {
+			isa = PBXGroup;
+			children = (
+				919C3D68234DB2CC00E0A0D4 /* Recipe.storyboard */,
+				919C3D6A234DB2D900E0A0D4 /* RecipeViewController.swift */,
+				919C3D6C234DB30E00E0A0D4 /* RecipeCoordinator.swift */,
+				919C3D722351D8EF00E0A0D4 /* RecipeTableViewCell.swift */,
+				919C3D742351D91900E0A0D4 /* RecipeTableViewCell.xib */,
+				919C3D76235211D300E0A0D4 /* RecipeDetailViewController.swift */,
+			);
+			path = "Recipes Scene";
+			sourceTree = "<group>";
+		};
+		919C3D782352127400E0A0D4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				919C3D882356D20600E0A0D4 /* ImageLoaderURL.swift */,
+				919C3D792352128700E0A0D4 /* StarsView.swift */,
+				919C3D7D235214AB00E0A0D4 /* StarsView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9190034E2343257F00EC35EE /* HelloFreshv3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9190037C2343258100EC35EE /* Build configuration list for PBXNativeTarget "HelloFreshv3" */;
+			buildPhases = (
+				9190034B2343257F00EC35EE /* Sources */,
+				9190034C2343257F00EC35EE /* Frameworks */,
+				9190034D2343257F00EC35EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HelloFreshv3;
+			packageProductDependencies = (
+				9106C45F234B1C6600362F7C /* RxCocoa */,
+				9106C463234B1C6600362F7C /* RxSwift */,
+			);
+			productName = HelloFreshv3;
+			productReference = 9190034F2343257F00EC35EE /* HelloFreshv3.app */;
+			productType = "com.apple.product-type.application";
+		};
+		919003672343258100EC35EE /* HelloFreshv3Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9190037F2343258100EC35EE /* Build configuration list for PBXNativeTarget "HelloFreshv3Tests" */;
+			buildPhases = (
+				919003642343258100EC35EE /* Sources */,
+				919003652343258100EC35EE /* Frameworks */,
+				919003662343258100EC35EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9190036A2343258100EC35EE /* PBXTargetDependency */,
+			);
+			name = HelloFreshv3Tests;
+			productName = HelloFreshv3Tests;
+			productReference = 919003682343258100EC35EE /* HelloFreshv3Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		919003722343258100EC35EE /* HelloFreshv3UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 919003822343258100EC35EE /* Build configuration list for PBXNativeTarget "HelloFreshv3UITests" */;
+			buildPhases = (
+				9190036F2343258100EC35EE /* Sources */,
+				919003702343258100EC35EE /* Frameworks */,
+				919003712343258100EC35EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				919003752343258100EC35EE /* PBXTargetDependency */,
+			);
+			name = HelloFreshv3UITests;
+			productName = HelloFreshv3UITests;
+			productReference = 919003732343258100EC35EE /* HelloFreshv3UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		919003472343257F00EC35EE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = CraftCode;
+				TargetAttributes = {
+					9190034E2343257F00EC35EE = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					919003672343258100EC35EE = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 9190034E2343257F00EC35EE;
+					};
+					919003722343258100EC35EE = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 9190034E2343257F00EC35EE;
+					};
+				};
+			};
+			buildConfigurationList = 9190034A2343257F00EC35EE /* Build configuration list for PBXProject "HelloFreshv3" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 919003462343257F00EC35EE;
+			packageReferences = (
+				9106C45B234B1A4800362F7C /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
+			productRefGroup = 919003502343257F00EC35EE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9190034E2343257F00EC35EE /* HelloFreshv3 */,
+				919003672343258100EC35EE /* HelloFreshv3Tests */,
+				919003722343258100EC35EE /* HelloFreshv3UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9190034D2343257F00EC35EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				919C3D752351D91900E0A0D4 /* RecipeTableViewCell.xib in Resources */,
+				91900393234328FA00EC35EE /* Login.storyboard in Resources */,
+				919003622343258100EC35EE /* LaunchScreen.storyboard in Resources */,
+				9190035F2343258100EC35EE /* Assets.xcassets in Resources */,
+				919C3D69234DB2CC00E0A0D4 /* Recipe.storyboard in Resources */,
+				919C3D71235074B900E0A0D4 /* recipes.json in Resources */,
+				919C3D7E235214AB00E0A0D4 /* StarsView.xib in Resources */,
+				9190035A2343257F00EC35EE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		919003662343258100EC35EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		919003712343258100EC35EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9190034B2343257F00EC35EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				919C3D8D2356D25200E0A0D4 /* Observable+Extensions.swift in Sources */,
+				919003902343279700EC35EE /* Storyboards.swift in Sources */,
+				9190038E2343277400EC35EE /* LoginViewController.swift in Sources */,
+				919003572343257F00EC35EE /* ViewController.swift in Sources */,
+				919C3D732351D8EF00E0A0D4 /* RecipeTableViewCell.swift in Sources */,
+				919003532343257F00EC35EE /* AppDelegate.swift in Sources */,
+				9106C46B234C446D00362F7C /* ViewModelProtocol.swift in Sources */,
+				9190038C2343264D00EC35EE /* Coordinator.swift in Sources */,
+				9190038A2343260D00EC35EE /* AppCoordinator.swift in Sources */,
+				9106C45A234B166F00362F7C /* LoginService.swift in Sources */,
+				919C3D6F235050FE00E0A0D4 /* RecipeViewModel.swift in Sources */,
+				919C3D6B234DB2D900E0A0D4 /* RecipeViewController.swift in Sources */,
+				919C3D6D234DB30E00E0A0D4 /* RecipeCoordinator.swift in Sources */,
+				9106C470234C45C000362F7C /* User.swift in Sources */,
+				9106C455234B148600362F7C /* Recipe.swift in Sources */,
+				919C3D7A2352128700E0A0D4 /* StarsView.swift in Sources */,
+				9106C472234C45E800362F7C /* Credentials.swift in Sources */,
+				9106C458234B155A00362F7C /* RecipeService.swift in Sources */,
+				919C3D8B2356D22B00E0A0D4 /* UIViewControllerExtensions.swift in Sources */,
+				9106C46E234C451A00362F7C /* LoginControllerViewModel.swift in Sources */,
+				9106C468234C442F00362F7C /* ControllerType.swift in Sources */,
+				919C3D77235211D300E0A0D4 /* RecipeDetailViewController.swift in Sources */,
+				919C3D892356D20600E0A0D4 /* ImageLoaderURL.swift in Sources */,
+				9190035D2343257F00EC35EE /* HelloFreshv3.xcdatamodeld in Sources */,
+				919003552343257F00EC35EE /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		919003642343258100EC35EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9190036D2343258100EC35EE /* HelloFreshv3Tests.swift in Sources */,
+				919C3D7C2352145F00E0A0D4 /* HelloFreshServices.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9190036F2343258100EC35EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				919003782343258100EC35EE /* HelloFreshv3UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9190036A2343258100EC35EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9190034E2343257F00EC35EE /* HelloFreshv3 */;
+			targetProxy = 919003692343258100EC35EE /* PBXContainerItemProxy */;
+		};
+		919003752343258100EC35EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9190034E2343257F00EC35EE /* HelloFreshv3 */;
+			targetProxy = 919003742343258100EC35EE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		919003582343257F00EC35EE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				919003592343257F00EC35EE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		919003602343258100EC35EE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				919003612343258100EC35EE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9190037A2343258100EC35EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9190037B2343258100EC35EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9190037D2343258100EC35EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BYKNZ8J7A7;
+				INFOPLIST_FILE = HelloFreshv3/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CraftCode.HelloFreshv3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9190037E2343258100EC35EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BYKNZ8J7A7;
+				INFOPLIST_FILE = HelloFreshv3/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CraftCode.HelloFreshv3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		919003802343258100EC35EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BYKNZ8J7A7;
+				INFOPLIST_FILE = HelloFreshv3Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CraftCode.HelloFreshv3Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HelloFreshv3.app/HelloFreshv3";
+			};
+			name = Debug;
+		};
+		919003812343258100EC35EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BYKNZ8J7A7;
+				INFOPLIST_FILE = HelloFreshv3Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CraftCode.HelloFreshv3Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HelloFreshv3.app/HelloFreshv3";
+			};
+			name = Release;
+		};
+		919003832343258100EC35EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BYKNZ8J7A7;
+				INFOPLIST_FILE = HelloFreshv3UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CraftCode.HelloFreshv3UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HelloFreshv3;
+			};
+			name = Debug;
+		};
+		919003842343258100EC35EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BYKNZ8J7A7;
+				INFOPLIST_FILE = HelloFreshv3UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CraftCode.HelloFreshv3UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HelloFreshv3;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9190034A2343257F00EC35EE /* Build configuration list for PBXProject "HelloFreshv3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9190037A2343258100EC35EE /* Debug */,
+				9190037B2343258100EC35EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9190037C2343258100EC35EE /* Build configuration list for PBXNativeTarget "HelloFreshv3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9190037D2343258100EC35EE /* Debug */,
+				9190037E2343258100EC35EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9190037F2343258100EC35EE /* Build configuration list for PBXNativeTarget "HelloFreshv3Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				919003802343258100EC35EE /* Debug */,
+				919003812343258100EC35EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		919003822343258100EC35EE /* Build configuration list for PBXNativeTarget "HelloFreshv3UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				919003832343258100EC35EE /* Debug */,
+				919003842343258100EC35EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9106C45B234B1A4800362F7C /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9106C45F234B1C6600362F7C /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9106C45B234B1A4800362F7C /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		9106C463234B1C6600362F7C /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9106C45B234B1A4800362F7C /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		9190035B2343257F00EC35EE /* HelloFreshv3.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9190035C2343257F00EC35EE /* HelloFreshv3.xcdatamodel */,
+			);
+			currentVersion = 9190035C2343257F00EC35EE /* HelloFreshv3.xcdatamodel */;
+			path = HelloFreshv3.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 919003472343257F00EC35EE /* Project object */;
+}

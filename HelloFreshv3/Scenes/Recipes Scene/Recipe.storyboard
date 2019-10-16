@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Recipe View Controller-->
+        <scene sceneID="ZiI-WR-PQE">
+            <objects>
+                <viewController restorationIdentifier="RecipeViewController" storyboardIdentifier="RecipeViewController" id="UZh-qB-Xd1" customClass="RecipeViewController" customModule="HelloFreshv3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u9w-Y9-e6y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PbP-5N-KSn">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="PbP-5N-KSn" firstAttribute="trailing" secondItem="CNd-L4-dYc" secondAttribute="trailing" id="Eym-Ja-2Qj"/>
+                            <constraint firstAttribute="bottom" secondItem="PbP-5N-KSn" secondAttribute="bottom" id="FgQ-a0-eIk"/>
+                            <constraint firstItem="PbP-5N-KSn" firstAttribute="leading" secondItem="CNd-L4-dYc" secondAttribute="leading" id="hF5-wt-Z2g"/>
+                            <constraint firstItem="PbP-5N-KSn" firstAttribute="top" secondItem="u9w-Y9-e6y" secondAttribute="top" id="p8B-2C-Tog"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CNd-L4-dYc"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="PbP-5N-KSn" id="qt2-sd-fYd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2ud-gx-8GY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="150.72463768115944" y="124.55357142857142"/>
+        </scene>
+        <!--Recipe Detail View Controller-->
+        <scene sceneID="wjC-Lr-niA">
+            <objects>
+                <viewController restorationIdentifier="RecipeDetailViewController" storyboardIdentifier="RecipeDetailViewController" id="QA3-Bd-2As" customClass="RecipeDetailViewController" customModule="HelloFreshv3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tMO-ZT-TL2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uf9-1k-eoj" customClass="ImageLoaderURL" customModule="HelloFreshv3" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="403"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="403" id="ebs-y3-xtg"/>
+                                    <constraint firstAttribute="width" constant="414" id="lak-XP-lOn"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="omE-d3-X2i">
+                                <rect key="frame" x="20" y="411" width="374" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="rBe-aK-Gq8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lSZ-aH-du6">
+                                <rect key="frame" x="143" y="432" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="IRG-4r-ySY"/>
+                                    <constraint firstAttribute="width" constant="128" id="c7x-fl-zSL"/>
+                                </constraints>
+                                <state key="normal" image="heart"/>
+                                <connections>
+                                    <action selector="saveFavorite:" destination="QA3-Bd-2As" eventType="touchUpInside" id="KIi-WE-TZn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="lSZ-aH-du6" firstAttribute="top" secondItem="omE-d3-X2i" secondAttribute="bottom" constant="0.5" id="6zW-cl-d5a"/>
+                            <constraint firstItem="Uf9-1k-eoj" firstAttribute="leading" secondItem="9S5-Yt-BAu" secondAttribute="leading" id="731-tG-oIa"/>
+                            <constraint firstItem="omE-d3-X2i" firstAttribute="top" secondItem="Uf9-1k-eoj" secondAttribute="bottom" constant="8" id="8Ux-fr-oIV"/>
+                            <constraint firstItem="lSZ-aH-du6" firstAttribute="centerX" secondItem="omE-d3-X2i" secondAttribute="centerX" id="9cZ-OH-QJD"/>
+                            <constraint firstItem="9S5-Yt-BAu" firstAttribute="top" secondItem="Uf9-1k-eoj" secondAttribute="top" constant="44" id="Qgj-8Y-uZB"/>
+                            <constraint firstItem="omE-d3-X2i" firstAttribute="centerX" secondItem="Uf9-1k-eoj" secondAttribute="centerX" id="UQv-An-3Q5"/>
+                            <constraint firstItem="Uf9-1k-eoj" firstAttribute="trailing" secondItem="9S5-Yt-BAu" secondAttribute="trailing" id="sf8-Nq-4sx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9S5-Yt-BAu"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageRecipe" destination="Uf9-1k-eoj" id="4GQ-Ux-qWx"/>
+                        <outlet property="nameRecipe" destination="omE-d3-X2i" id="gGB-5Q-Zfl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ROw-sE-4tZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="892.75362318840587" y="124.55357142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="heart" width="128" height="128"/>
+    </resources>
+</document>

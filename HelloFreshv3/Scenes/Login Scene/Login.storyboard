@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="0sl-DB-Va4">
+            <objects>
+                <viewController restorationIdentifier="LoginViewController" storyboardIdentifier="LoginViewController" id="ac5-nu-sGh" customClass="LoginViewController" customModule="HelloFreshv3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h93-na-8DS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0ue-Fi-1eQ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="h3" translatesAutoresizingMaskIntoConstraints="NO" id="NYc-IB-QVe">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="450"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="414" id="KQq-bF-ndW"/>
+                                            <constraint firstAttribute="height" constant="450" id="t2m-1p-bJF"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rnm-Cp-kf0">
+                                        <rect key="frame" x="32.5" y="693" width="349" height="149"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KOC-VG-uP8">
+                                                <rect key="frame" x="0.0" y="0.0" width="349" height="78"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qIV-G7-cRG">
+                                                        <rect key="frame" x="0.0" y="0.0" width="349" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zNY-VK-H2p">
+                                                        <rect key="frame" x="0.0" y="44" width="349" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDd-QI-5Bf">
+                                                <rect key="frame" x="0.0" y="88" width="349" height="61"/>
+                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="349" id="6Pj-aP-K0a"/>
+                                                    <constraint firstAttribute="height" constant="61" id="FwZ-xr-hYW"/>
+                                                </constraints>
+                                                <state key="normal" title="Login"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="0ue-Fi-1eQ" firstAttribute="trailing" secondItem="Fsa-ZK-AgU" secondAttribute="trailing" id="T9N-up-5vJ"/>
+                            <constraint firstItem="0ue-Fi-1eQ" firstAttribute="leading" secondItem="Fsa-ZK-AgU" secondAttribute="leading" id="ca3-bv-UsZ"/>
+                            <constraint firstItem="Fsa-ZK-AgU" firstAttribute="bottom" secondItem="0ue-Fi-1eQ" secondAttribute="bottom" constant="20" id="edg-M2-nQq"/>
+                            <constraint firstItem="0ue-Fi-1eQ" firstAttribute="top" secondItem="h93-na-8DS" secondAttribute="top" id="esv-fF-nXv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Fsa-ZK-AgU"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextfield" destination="qIV-G7-cRG" id="6La-FL-Jte"/>
+                        <outlet property="passwordTextfield" destination="zNY-VK-H2p" id="ZDe-bH-Tnb"/>
+                        <outlet property="signInButton" destination="UDd-QI-5Bf" id="gR3-Dv-O6y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xdh-sq-ImA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="89.855072463768124" y="89.732142857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="h3" width="1024" height="545"/>
+    </resources>
+</document>
